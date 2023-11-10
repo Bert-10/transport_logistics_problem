@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "exceljs": "^4.4.0",
+    "javascript-lp-solver": "^0.4.24"
+  }
+}
