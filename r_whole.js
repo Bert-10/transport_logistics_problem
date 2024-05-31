@@ -17,13 +17,13 @@ function matrixArray(rows,columns){
     return arr;
 }
 
-function get_table_row(c_car,row,row_number,first_row_number,first_column_number,n){
+function get_table_row(arr,row,row_number,first_row_number,first_column_number,n){
     for (let colomn_number = first_column_number; colomn_number < n+first_column_number; colomn_number++) {
         if (row[colomn_number]!=undefined){
-            c_car[row_number-first_row_number][colomn_number-first_column_number]=row[colomn_number]
+            arr[row_number-first_row_number][colomn_number-first_column_number]=row[colomn_number]
         }
     }
-    return c_car;
+    return arr;
 }
 
 async function parse_data_from_excel(filename) {
@@ -51,6 +51,7 @@ async function parse_data_from_excel(filename) {
 
     for (let row_number = first_row_number; row_number < m+first_row_number; row_number++){
         row = worksheet.getRow(row_number).values;
+        // console.log(row)
         c_car = get_table_row(c_car, row,row_number, first_row_number, first_column_number, n)
         c_rail = get_table_row(c_rail, row,row_number, 
             first_row_number, 
@@ -89,7 +90,7 @@ async function parse_data_from_excel(filename) {
     s = worksheet.getRow(3).values[9];
     result.set("t_car", t_car).set("t_rail", t_rail).set("t_plane", t_plane).set("s", s)
     // console.log(s)
-    first_row_number = m + 3 + first_row_number
+    first_row_number = m + step_between_tables_rows_numbers + first_row_number
     var stocks = new Array();
     var index = first_column_number+n
     var i = 0
@@ -205,6 +206,7 @@ function get_r_variables_ints(variables, ints, c_arr, gk_arr, t_arr, str){
     }
 }
 function solve_r_lp(dict){
+    // console.log(dict)
     const time_start= new Date().getTime();
     var solver = require('javascript-lp-solver'),
     // results,
@@ -268,4 +270,23 @@ function solve_r_lp(dict){
 //     console.log('.catch block ran: ', err);
 //   });;
 // parse_data_from_excel
-parse_data_from_excel('C:\\Users\\misha\\Desktop\\code\\test_data_4x4.xlsx').then(solve_r_lp);
+parse_data_from_excel('C:\\Users\\misha\\Desktop\\code\\test_data\\test_data_5x5.xlsx').then(solve_r_lp);
+
+// model = {
+//     "что нужно оптимизировать?": "прибыль магазина",
+//     "каким образом нужно оптимизировать?": "найти максимум",
+//     "ограничения задачи": {
+//         "ограничение на дерево": {"максимум можно использовать": 300},
+//         "ограничение на общее время работы": {"максимум можно использовать": 110},
+//         "ограничение на складские помещения": {"максимум можно использовать": 400}
+//     },
+//     "переменные": {
+//         "стол": {"дерева на производство затратится": 30,
+//         "общего времени работы затратится": 5, "принесет прибыли": 1200, 
+//         "места хранения затратится": 30},
+//         "камод": {"дерева на производство затратится": 20, 
+//         "общего времени работы затратится": 10, "принесет прибыли": 1600, 
+//         "места хранения затратится": 50}
+//     },
+//     "целочисленные переменные": {"стол": 1, "камод": 1}
+// }

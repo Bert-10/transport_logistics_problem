@@ -14,13 +14,13 @@ function matrixArray(rows,columns){
     return arr;
 }
 
-function get_table_row(c_car,row,row_number,first_row_number,first_column_number,n){
+function get_table_row(arr,row,row_number,first_row_number,first_column_number,n){
     for (let colomn_number = first_column_number; colomn_number < n+first_column_number; colomn_number++) {
         if (row[colomn_number]!=undefined){
-            c_car[row_number-first_row_number][colomn_number-first_column_number]=row[colomn_number]
+            arr[row_number-first_row_number][colomn_number-first_column_number]=row[colomn_number]
         }
     }
-    return c_car;
+    return arr;
 }
 
 async function parse_data_from_excel(filename) {
@@ -86,7 +86,7 @@ async function parse_data_from_excel(filename) {
     s = worksheet.getRow(3).values[9];
     result.set("t_car", t_car).set("t_rail", t_rail).set("t_plane", t_plane).set("s", s)
     // console.log(s)
-    first_row_number = m + 3 + first_row_number
+    first_row_number = m + step_between_tables_rows_numbers + first_row_number
     var stocks = new Array();
     var index = first_column_number+n
     var i = 0
@@ -245,4 +245,4 @@ function solve_r_lp(dict){
 //     console.log('.catch block ran: ', err);
 //   });;
 // parse_data_from_excel
-parse_data_from_excel('C:\\Users\\misha\\Desktop\\code\\test_data_5x12.xlsx').then(solve_r_lp);
+parse_data_from_excel('C:\\Users\\misha\\Desktop\\code\\test_data\\test_data_5x12.xlsx').then(solve_r_lp);

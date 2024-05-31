@@ -30,7 +30,7 @@ function get_table_row(arr,row,row_number,first_row_number,first_column_number,n
 async function parse_data_from_excel(filename) {
     const test_data_file = await workbook.xlsx.readFile(filename);
     var worksheet = test_data_file.worksheets[0];
-    row = worksheet.getRow(3).values;
+    var row = worksheet.getRow(3).values;
     const m = row[2]
     const n = row[3]
     // var row = worksheet.getRow(7);
@@ -87,7 +87,7 @@ async function parse_data_from_excel(filename) {
             first_row_number, 
             first_column_number + 2*n + 2*step_between_tables_cols_numbers, n)
     }
-    s = worksheet.getRow(3).values[9];
+    var s = worksheet.getRow(3).values[9];
     result.set("t_car", t_car).set("t_rail", t_rail).set("t_plane", t_plane).set("s", s)
     // console.log(s)
     first_row_number = m + step_between_tables_rows_numbers + first_row_number
@@ -121,7 +121,7 @@ function build_model(dict){
     const stocks = dict.get("stocks")
     //ограничения по a
     for(let i = 0; i < stocks.length; i++){
-        constraints[`a${i+1}`] = {"max":stocks[i]}
+        constraints[`a${i+1}`] = {"equal":stocks[i]}
     }
     const needs = dict.get("needs")
     //ограничения по b
@@ -171,37 +171,33 @@ function get_c_constraints(constraints,arr,str){
         for(let j = 0; j < arr[i].length; j++){
             if(arr[i][j]!=0){
                 constraints[`c_w_${i+1}_${j+1}_${str}`] = {"max":1}
-                constraints[`c_gw_r_${i+1}_${j+1}_${str}`] = {"min":0}
-                constraints[`c_w_r_${i+1}_${j+1}_${str}`] = {"max":0}
+                constraints[`c_r_w_${i+1}_${j+1}_${str}`] = {"min":0}
             }
         }
     }
 }
 function get_r_variables_ints(variables, ints, c_arr, gk_arr, t_arr, str){
     var temp_v = new Object()
+    var gk
     for(let i = 0; i < c_arr.length; i++){
         for(let j = 0; j < c_arr[i].length; j++){
             if(c_arr[i][j]!=0){
                 //-----        
-                //дробные r и нет z. 
+                //дробные r и нет z. из s отномается все соответствующее t
                 temp_v = new Object()
                 gk = gk_arr[i][j]
                 temp_v["price"] = c_arr[i][j]*gk
                 temp_v[`a${i+1}`] = gk
                 temp_v[`b${j+1}`] = gk
                 temp_v[`s${i+1}_${str}`] = t_arr[i][j]
-                temp_v[`c_gw_r_${i+1}_${j+1}_${str}`] = -1
-                temp_v[`c_w_r_${i+1}_${j+1}_${str}`] = -1
+                temp_v[`c_r_w_${i+1}_${j+1}_${str}`] = -1
                 variables[`r_${i+1}_${j+1}_${str}`] = temp_v
                 //-----
                 //w
                 temp_v = new Object()
-                //---
-                // temp_v["price"] = 0
-                //---
                 temp_v[`c_w_${i+1}_${j+1}_${str}`] = 1
-                temp_v[`c_gw_r_${i+1}_${j+1}_${str}`] = 10000
-                temp_v[`c_w_r_${i+1}_${j+1}_${str}`] = 1
+                temp_v[`c_r_w_${i+1}_${j+1}_${str}`] = 10000
+                // temp_v["price"] = -1000000
                 temp_v[`s${i+1}_${str}`] = t_arr[i][j]
                 variables[`w_${i+1}_${j+1}_${str}`] = temp_v
                 
@@ -217,15 +213,15 @@ function solve_r_lp(dict){
     model = build_model(dict)
     console.log(model)
     var constraints_count = 0
-    for (var c in model.constraints) {
+    for (var c in model['constraints']) {
         constraints_count+=1
     }
     var ints_count = 0
-    for (var c in model.ints) {
+    for (var c in model['ints']) {
         ints_count+=1
     }
     var variables_count = 0
-    for (var c in model.variables) {
+    for (var c in model['variables']) {
         variables_count+=1
     }
     console.log({
@@ -233,7 +229,7 @@ function solve_r_lp(dict){
         "constraints_count": constraints_count,
         "ints_count": ints_count
     })
-    results = solver.Solve(model);
+    var results = solver.Solve(model);
 
     const time_end = new Date().getTime();
     //конвертация в r + z
@@ -254,8 +250,12 @@ function solve_r_lp(dict){
     //----------------
 
     //----------------- конвертация в х
-    s_counted = new Object()
-    for (obj in results){
+    var s_counted = new Object()
+    var temp_r
+    var arrayOfStrings
+    var r
+    var s
+    for (var obj in results){
         if(obj[0]==="r" && obj!=="result"){
             temp_r = results[obj]
             arrayOfStrings = obj.split("_");
@@ -280,33 +280,31 @@ function solve_r_lp(dict){
     // console.log(typeof 'd');
 
     // //------- подсчет ограничений черех x
-    const_original = new Object()
-    const_counted = new Object()
-    constraints_model = model["constraints"]
-    for (obj in constraints_model){
-        if(obj[0]==="a" || obj[0]==="b"){
-            const_original[obj] = constraints_model[obj]["equal"]
-            const_counted[obj] = 0
-        }
-    }
+    // const_original = new Object()
+    // const_counted = new Object()
+    // constraints_model = model["constraints"]
+    // for (obj in constraints_model){
+    //     if(obj[0]==="a" || obj[0]==="b"){
+    //         const_original[obj] = constraints_model[obj]["equal"]
+    //         const_counted[obj] = 0
+    //     }
+    // }
 
-    for (obj in results){
-        arrayOfStrings = obj.split("_");
-        if(arrayOfStrings[0]==="x"){
-            const_counted[`a${arrayOfStrings[1]}`]+=results[obj]
-            const_counted[`b${arrayOfStrings[2]}`]+=results[obj]
-        } 
-    }
-    console.log(const_original)
-    console.log(const_counted)
-    console.log(s_counted)
+    // for (obj in results){
+    //     arrayOfStrings = obj.split("_");
+    //     if(arrayOfStrings[0]==="x"){
+    //         const_counted[`a${arrayOfStrings[1]}`]+=results[obj]
+    //         const_counted[`b${arrayOfStrings[2]}`]+=results[obj]
+    //     } 
+    // }
+    // console.log(const_original)
+    // console.log(const_counted)
+    // console.log(s_counted)
     // //-------------------------------
 
 
     //--------------- подсчет ограничений на a и b через r и z
     // variables = model.variables
-    // const_original = new Object()
-    // const_counted = new Object()
     // // console.log(variables)
     // for (obj in results){
     //     arrayOfStrings = obj.split("_");
@@ -329,4 +327,4 @@ function solve_r_lp(dict){
 //     console.log('.catch block ran: ', err);
 //   });;
 // parse_data_from_excel
-parse_data_from_excel('C:\\Users\\misha\\Desktop\\code\\test_data\\test_data_5x12_s.xlsx').then(solve_r_lp);
+parse_data_from_excel('C:\\Users\\misha\\Desktop\\code\\test_data\\test_data_5x12.xlsx').then(solve_r_lp);
