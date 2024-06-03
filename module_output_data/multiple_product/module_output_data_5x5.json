@@ -1,0 +1,330 @@
+{
+    "plan_list": [
+        {
+            "product_list": [
+                "мука",
+                "помидор"
+            ],
+            "cons_count": 183,
+            "working_time": 0.013,
+            "fun": 28766169.327,
+            "node_count": 1,
+            "success": true,
+            "model": "fractional",
+            "opt_func": "cost",
+            "variables_count": 148,
+            "trips": [
+                {
+                    "value": 2400.0,
+                    "unit": "other",
+                    "product_name": "мука",
+                    "transport": "авто",
+                    "stock_name": "Склад №1",
+                    "need_name": "МО №4"
+                },
+                {
+                    "value": 3476.0,
+                    "unit": "other",
+                    "product_name": "мука",
+                    "transport": "авто",
+                    "stock_name": "Склад №2",
+                    "need_name": "МО №2"
+                },
+                {
+                    "value": 10132.018,
+                    "unit": "other",
+                    "product_name": "мука",
+                    "transport": "авто",
+                    "stock_name": "Склад №3",
+                    "need_name": "МО №2"
+                },
+                {
+                    "value": 1396.0,
+                    "unit": "other",
+                    "product_name": "мука",
+                    "transport": "авто",
+                    "stock_name": "Склад №3",
+                    "need_name": "МО №3"
+                },
+                {
+                    "value": 14604.0,
+                    "unit": "other",
+                    "product_name": "мука",
+                    "transport": "авто",
+                    "stock_name": "Склад №4",
+                    "need_name": "МО №3"
+                },
+                {
+                    "value": 19236.0,
+                    "unit": "other",
+                    "product_name": "мука",
+                    "transport": "жд",
+                    "stock_name": "Склад №1",
+                    "need_name": "МО №1"
+                },
+                {
+                    "value": 10644.0,
+                    "unit": "other",
+                    "product_name": "мука",
+                    "transport": "жд",
+                    "stock_name": "Склад №2",
+                    "need_name": "МО №1"
+                },
+                {
+                    "value": 4200.0,
+                    "unit": "other",
+                    "product_name": "мука",
+                    "transport": "жд",
+                    "stock_name": "Склад №3",
+                    "need_name": "МО №5"
+                },
+                {
+                    "value": 20120.0,
+                    "unit": "other",
+                    "product_name": "мука",
+                    "transport": "жд",
+                    "stock_name": "Склад №5",
+                    "need_name": "МО №1"
+                },
+                {
+                    "value": 6391.982,
+                    "unit": "other",
+                    "product_name": "мука",
+                    "transport": "авиа",
+                    "stock_name": "Склад №3",
+                    "need_name": "МО №2"
+                },
+                {
+                    "value": 1500.0,
+                    "unit": "other",
+                    "product_name": "помидор",
+                    "transport": "авто",
+                    "stock_name": "Склад №1",
+                    "need_name": "МО №4"
+                },
+                {
+                    "value": 2000.0,
+                    "unit": "other",
+                    "product_name": "помидор",
+                    "transport": "авто",
+                    "stock_name": "Склад №2",
+                    "need_name": "МО №2"
+                },
+                {
+                    "value": 850.0,
+                    "unit": "other",
+                    "product_name": "помидор",
+                    "transport": "авто",
+                    "stock_name": "Склад №2",
+                    "need_name": "МО №5"
+                },
+                {
+                    "value": 1500.0,
+                    "unit": "other",
+                    "product_name": "помидор",
+                    "transport": "авто",
+                    "stock_name": "Склад №3",
+                    "need_name": "МО №3"
+                },
+                {
+                    "value": 1500.0,
+                    "unit": "other",
+                    "product_name": "помидор",
+                    "transport": "авто",
+                    "stock_name": "Склад №4",
+                    "need_name": "МО №3"
+                },
+                {
+                    "value": 3000.0,
+                    "unit": "other",
+                    "product_name": "помидор",
+                    "transport": "авто",
+                    "stock_name": "Склад №5",
+                    "need_name": "МО №4"
+                },
+                {
+                    "value": 8000.0,
+                    "unit": "other",
+                    "product_name": "помидор",
+                    "transport": "жд",
+                    "stock_name": "Склад №1",
+                    "need_name": "МО №1"
+                },
+                {
+                    "value": 1500.0,
+                    "unit": "other",
+                    "product_name": "помидор",
+                    "transport": "жд",
+                    "stock_name": "Склад №3",
+                    "need_name": "МО №5"
+                }
+            ],
+            "c_a": [
+                {
+                    "value": 21636.0,
+                    "product_name": "мука",
+                    "stock_name": "Склад №1"
+                },
+                {
+                    "value": 14120.0,
+                    "product_name": "мука",
+                    "stock_name": "Склад №2"
+                },
+                {
+                    "value": 22120.0,
+                    "product_name": "мука",
+                    "stock_name": "Склад №3"
+                },
+                {
+                    "value": 14604.0,
+                    "product_name": "мука",
+                    "stock_name": "Склад №4"
+                },
+                {
+                    "value": 20120.0,
+                    "product_name": "мука",
+                    "stock_name": "Склад №5"
+                },
+                {
+                    "value": 9500.0,
+                    "product_name": "помидор",
+                    "stock_name": "Склад №1"
+                },
+                {
+                    "value": 2850.0,
+                    "product_name": "помидор",
+                    "stock_name": "Склад №2"
+                },
+                {
+                    "value": 3000.0,
+                    "product_name": "помидор",
+                    "stock_name": "Склад №3"
+                },
+                {
+                    "value": 1500.0,
+                    "product_name": "помидор",
+                    "stock_name": "Склад №4"
+                },
+                {
+                    "value": 3000.0,
+                    "product_name": "помидор",
+                    "stock_name": "Склад №5"
+                }
+            ],
+            "c_b": [
+                {
+                    "value": 2400.0,
+                    "product_name": "мука",
+                    "need_name": "МО №4"
+                },
+                {
+                    "value": 20000.0,
+                    "product_name": "мука",
+                    "need_name": "МО №2"
+                },
+                {
+                    "value": 16000.0,
+                    "product_name": "мука",
+                    "need_name": "МО №3"
+                },
+                {
+                    "value": 50000.0,
+                    "product_name": "мука",
+                    "need_name": "МО №1"
+                },
+                {
+                    "value": 4200.0,
+                    "product_name": "мука",
+                    "need_name": "МО №5"
+                },
+                {
+                    "value": 4500.0,
+                    "product_name": "помидор",
+                    "need_name": "МО №4"
+                },
+                {
+                    "value": 2000.0,
+                    "product_name": "помидор",
+                    "need_name": "МО №2"
+                },
+                {
+                    "value": 2350.0,
+                    "product_name": "помидор",
+                    "need_name": "МО №5"
+                },
+                {
+                    "value": 3000.0,
+                    "product_name": "помидор",
+                    "need_name": "МО №3"
+                },
+                {
+                    "value": 8000.0,
+                    "product_name": "помидор",
+                    "need_name": "МО №1"
+                }
+            ],
+            "c_s": [
+                {
+                    "value": 52.062,
+                    "group": "1",
+                    "transport": "авто",
+                    "stock_name": "Склад №1"
+                },
+                {
+                    "value": 202.963,
+                    "group": "1",
+                    "transport": "авто",
+                    "stock_name": "Склад №2"
+                },
+                {
+                    "value": 1436.7,
+                    "group": "1",
+                    "transport": "авто",
+                    "stock_name": "Склад №3"
+                },
+                {
+                    "value": 267.75,
+                    "group": "1",
+                    "transport": "авто",
+                    "stock_name": "Склад №4"
+                },
+                {
+                    "value": 672.0,
+                    "group": "1",
+                    "transport": "жд",
+                    "stock_name": "Склад №1"
+                },
+                {
+                    "value": 264.0,
+                    "group": "1",
+                    "transport": "жд",
+                    "stock_name": "Склад №2"
+                },
+                {
+                    "value": 168.0,
+                    "group": "1",
+                    "transport": "жд",
+                    "stock_name": "Склад №3"
+                },
+                {
+                    "value": 504.0,
+                    "group": "1",
+                    "transport": "жд",
+                    "stock_name": "Склад №5"
+                },
+                {
+                    "value": 768.0,
+                    "group": "1",
+                    "transport": "авиа",
+                    "stock_name": "Склад №3"
+                },
+                {
+                    "value": 38.125,
+                    "group": "1",
+                    "transport": "авто",
+                    "stock_name": "Склад №5"
+                }
+            ]
+        }
+    ]
+}

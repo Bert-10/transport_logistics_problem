@@ -1,0 +1,86 @@
+{
+  "products_list": [
+    {
+      "product_name": "мука",
+      "group": 1,
+      "time": 3000,
+      "unit": "other",
+      "transport_list": [
+        {
+          "transport_name": "car",
+          "cost": [
+            [
+              36400,
+              11900
+            ],
+            [
+              47500,
+              11700
+            ]
+          ],
+          "gk": [
+            [
+              120,
+              120
+            ],
+            [
+              60,
+              60
+            ]
+          ],
+          "time": [
+            [
+              4.55,
+              1.49
+            ],
+            [
+              5.94,
+              1.46
+            ]
+          ],
+          "calc_trips": [
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ]
+          ]
+        }
+      ],
+      "stocks": [
+        {
+          "stock_name": "Склад №1",
+          "value": 44000
+        },
+        {
+          "stock_name": "Склад №2",
+          "value": 26000
+        }
+      ],
+      "needs": [
+        {
+          "need_name": "МО №1",
+          "value": 50000
+        },
+        {
+          "need_name": "МО №2",
+          "value": 20000
+        }
+      ]
+    }
+  ],
+  "plan_list": [
+    {
+      "model": "fractional",
+      "opt_func": "cost",
+      "priority": 1,
+      "products_names": [
+        "мука"
+      ]
+    }
+  ],
+  "max_cost": "nan"
+}

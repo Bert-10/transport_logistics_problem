@@ -1,0 +1,88 @@
+{
+    "plan_list": [
+        {
+            "product_list": [
+                "мука"
+            ],
+            "cons_count": 19,
+            "working_time": 0.003,
+            "fun": 1448.83,
+            "node_count": 1,
+            "success": true,
+            "model": "whole",
+            "opt_func": "time",
+            "variables_count": 16,
+            "trips": [
+                {
+                    "value": 20040.0,
+                    "unit": "other",
+                    "product_name": "мука",
+                    "transport": "car",
+                    "stock_name": "Склад №1",
+                    "need_name": "МО №2"
+                },
+                {
+                    "value": 24000.0,
+                    "unit": "other",
+                    "product_name": "мука",
+                    "transport": "rail",
+                    "stock_name": "Склад №1",
+                    "need_name": "МО №1"
+                },
+                {
+                    "value": 26000.0,
+                    "unit": "other",
+                    "product_name": "мука",
+                    "transport": "rail",
+                    "stock_name": "Склад №2",
+                    "need_name": "МО №1"
+                }
+            ],
+            "c_a": [
+                {
+                    "value": 44000.0,
+                    "product_name": "мука",
+                    "stock_name": "Склад №1"
+                },
+                {
+                    "value": 26000.0,
+                    "product_name": "мука",
+                    "stock_name": "Склад №2"
+                }
+            ],
+            "c_b": [
+                {
+                    "value": 20000.0,
+                    "product_name": "мука",
+                    "need_name": "МО №2"
+                },
+                {
+                    "value": 50000.0,
+                    "product_name": "мука",
+                    "need_name": "МО №1"
+                }
+            ],
+            "c_s": [
+                {
+                    "value": 248.83,
+                    "group": "1",
+                    "transport": "car",
+                    "stock_name": "Склад №1"
+                },
+                {
+                    "value": 576.0,
+                    "group": "1",
+                    "transport": "rail",
+                    "stock_name": "Склад №1"
+                },
+                {
+                    "value": 624.0,
+                    "group": "1",
+                    "transport": "rail",
+                    "stock_name": "Склад №2"
+                }
+            ],
+            "c_cost": 239500000.0
+        }
+    ]
+}

@@ -1,0 +1,190 @@
+{
+    "plan_list": [
+        {
+            "product_list": [
+                "мука"
+            ],
+            "cons_count": 100,
+            "working_time": 0.007,
+            "fun": 2074.967,
+            "node_count": 1,
+            "success": true,
+            "model": "fractional",
+            "opt_func": "time",
+            "variables_count": 74,
+            "trips": [
+                {
+                    "value": 5396.0,
+                    "unit": "other",
+                    "product_name": "мука",
+                    "transport": "авто",
+                    "stock_name": "Склад №1",
+                    "need_name": "МО №2"
+                },
+                {
+                    "value": 2400.0,
+                    "unit": "other",
+                    "product_name": "мука",
+                    "transport": "авто",
+                    "stock_name": "Склад №1",
+                    "need_name": "МО №4"
+                },
+                {
+                    "value": 14120.0,
+                    "unit": "other",
+                    "product_name": "мука",
+                    "transport": "авто",
+                    "stock_name": "Склад №2",
+                    "need_name": "МО №1"
+                },
+                {
+                    "value": 1920.0,
+                    "unit": "other",
+                    "product_name": "мука",
+                    "transport": "авто",
+                    "stock_name": "Склад №3",
+                    "need_name": "МО №1"
+                },
+                {
+                    "value": 16000.0,
+                    "unit": "other",
+                    "product_name": "мука",
+                    "transport": "авто",
+                    "stock_name": "Склад №3",
+                    "need_name": "МО №3"
+                },
+                {
+                    "value": 14604.0,
+                    "unit": "other",
+                    "product_name": "мука",
+                    "transport": "авто",
+                    "stock_name": "Склад №4",
+                    "need_name": "МО №2"
+                },
+                {
+                    "value": 13840.0,
+                    "unit": "other",
+                    "product_name": "мука",
+                    "transport": "жд",
+                    "stock_name": "Склад №1",
+                    "need_name": "МО №1"
+                },
+                {
+                    "value": 4200.0,
+                    "unit": "other",
+                    "product_name": "мука",
+                    "transport": "жд",
+                    "stock_name": "Склад №3",
+                    "need_name": "МО №5"
+                },
+                {
+                    "value": 20120.0,
+                    "unit": "other",
+                    "product_name": "мука",
+                    "transport": "жд",
+                    "stock_name": "Склад №5",
+                    "need_name": "МО №1"
+                }
+            ],
+            "c_a": [
+                {
+                    "value": 21636.0,
+                    "product_name": "мука",
+                    "stock_name": "Склад №1"
+                },
+                {
+                    "value": 14120.0,
+                    "product_name": "мука",
+                    "stock_name": "Склад №2"
+                },
+                {
+                    "value": 22120.0,
+                    "product_name": "мука",
+                    "stock_name": "Склад №3"
+                },
+                {
+                    "value": 14604.0,
+                    "product_name": "мука",
+                    "stock_name": "Склад №4"
+                },
+                {
+                    "value": 20120.0,
+                    "product_name": "мука",
+                    "stock_name": "Склад №5"
+                }
+            ],
+            "c_b": [
+                {
+                    "value": 20000.0,
+                    "product_name": "мука",
+                    "need_name": "МО №2"
+                },
+                {
+                    "value": 2400.0,
+                    "product_name": "мука",
+                    "need_name": "МО №4"
+                },
+                {
+                    "value": 50000.0,
+                    "product_name": "мука",
+                    "need_name": "МО №1"
+                },
+                {
+                    "value": 16000.0,
+                    "product_name": "мука",
+                    "need_name": "МО №3"
+                },
+                {
+                    "value": 4200.0,
+                    "product_name": "мука",
+                    "need_name": "МО №5"
+                }
+            ],
+            "c_s": [
+                {
+                    "value": 239.0,
+                    "group": "1",
+                    "transport": "авто",
+                    "stock_name": "Склад №1"
+                },
+                {
+                    "value": 206.5,
+                    "group": "1",
+                    "transport": "авто",
+                    "stock_name": "Склад №2"
+                },
+                {
+                    "value": 409.25,
+                    "group": "1",
+                    "transport": "авто",
+                    "stock_name": "Склад №3"
+                },
+                {
+                    "value": 299.512,
+                    "group": "1",
+                    "transport": "авто",
+                    "stock_name": "Склад №4"
+                },
+                {
+                    "value": 336.0,
+                    "group": "1",
+                    "transport": "жд",
+                    "stock_name": "Склад №1"
+                },
+                {
+                    "value": 120.0,
+                    "group": "1",
+                    "transport": "жд",
+                    "stock_name": "Склад №3"
+                },
+                {
+                    "value": 504.0,
+                    "group": "1",
+                    "transport": "жд",
+                    "stock_name": "Склад №5"
+                }
+            ],
+            "c_cost": 1113902600.0000002
+        }
+    ]
+}

@@ -129,11 +129,17 @@ function execute_file(fileName, params, path) {
 // var path_to_test_data ='E:\\Папка рабочего стола\\VScodeProjects\\vkr_js\\test_data3\\test_data_2x2.xlsx'
 // var path_to_test_data ='E:\\Папка рабочего стола\\VScodeProjects\\vkr_js\\test_data3\\1 product\\fractional_big_time\\test_data_2x2.xlsx'
 // var path_to_test_data ='E:\\Папка рабочего стола\\VScodeProjects\\vkr_js\\test_data3\\1 product\\cost\\test_data_3x3.xlsx'
-var PATH_TO_TEST_DATA ='E:\\Папка рабочего стола\\VScodeProjects\\vkr_js\\test_data\\1 product\\fractional_cost\\test_data_20x40.xlsx'
-let PATH_TO_INPUT_DATA = "E:\\Папка рабочего стола\\VScodeProjects\\vkr_js\\module_data\\module_input_data_2x2.json"
-let PATH_TO_SAVE_DATA = "E:\\Папка рабочего стола\\VScodeProjects\\vkr_js\\module_output_data\\module_output_data.json"
-let SOLVER_NAME = 'main.exe'
-let SOLVER_DIR = 'E:\\Папка рабочего стола\\pyCharmProjects\\connect_solver_by_pulp\\dist'
+// let file_name = ''
+
+// 20x40 5x12 5x5 4x4 3x3 2x2 2x2_1_transport
+// fractional_cost fractional_time whole_cost whole_time
+const file_name = '5x12'
+// const folder_name = 'fractional_cost'
+const PATH_TO_TEST_DATA =`E:\\Папка рабочего стола\\VScodeProjects\\vkr_js\\test_data\\multiple_product\\test_data_${file_name}.xlsx`
+const PATH_TO_INPUT_DATA = `E:\\Папка рабочего стола\\VScodeProjects\\vkr_js\\module_input_data\\multiple_product\\module_input_data_${file_name}.json`
+const PATH_TO_SAVE_DATA = `E:\\Папка рабочего стола\\VScodeProjects\\vkr_js\\module_output_data\\multiple_product\\module_output_data_${file_name}.json`
+const SOLVER_NAME = 'main.exe'
+const SOLVER_DIR = 'E:\\Папка рабочего стола\\pyCharmProjects\\connect_solver_by_pulp\\dist'
 
 
 get_data_from_excel(PATH_TO_TEST_DATA).then(

@@ -1,0 +1,567 @@
+{
+  "products_list": [
+    {
+      "product_name": "мука",
+      "group": 1,
+      "time": 1440,
+      "unit": "other",
+      "transport_list": [
+        {
+          "transport_name": "car",
+          "cost": [
+            [
+              36400,
+              11900
+            ],
+            [
+              47500,
+              11700
+            ]
+          ],
+          "gk": [
+            [
+              120,
+              120
+            ],
+            [
+              60,
+              60
+            ]
+          ],
+          "time": [
+            [
+              4.55,
+              1.49
+            ],
+            [
+              5.94,
+              1.46
+            ]
+          ],
+          "calc_trips": [
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "transport_name": "rail",
+          "cost": [
+            [
+              30000,
+              "nan"
+            ],
+            [
+              30000,
+              "nan"
+            ]
+          ],
+          "gk": [
+            [
+              1000,
+              "nan"
+            ],
+            [
+              1000,
+              "nan"
+            ]
+          ],
+          "time": [
+            [
+              24,
+              "nan"
+            ],
+            [
+              24,
+              "nan"
+            ]
+          ],
+          "calc_trips": [
+            [
+              1,
+              "nan"
+            ],
+            [
+              1,
+              "nan"
+            ]
+          ]
+        },
+        {
+          "transport_name": "air",
+          "cost": [
+            [
+              "nan",
+              250000
+            ],
+            [
+              "nan",
+              250000
+            ]
+          ],
+          "gk": [
+            [
+              "nan",
+              200
+            ],
+            [
+              "nan",
+              200
+            ]
+          ],
+          "time": [
+            [
+              "nan",
+              24
+            ],
+            [
+              "nan",
+              24
+            ]
+          ],
+          "calc_trips": [
+            [
+              "nan",
+              1
+            ],
+            [
+              "nan",
+              1
+            ]
+          ]
+        }
+      ],
+      "stocks": [
+        {
+          "stock_name": "Склад №1",
+          "value": 44000
+        },
+        {
+          "stock_name": "Склад №2",
+          "value": 26000
+        }
+      ],
+      "needs": [
+        {
+          "need_name": "МО №1",
+          "value": 50000
+        },
+        {
+          "need_name": "МО №2",
+          "value": 20000
+        }
+      ]
+    },
+    {
+      "product_name": "картофель",
+      "group": 1,
+      "time": 1440,
+      "unit": "trips",
+      "transport_list": [
+        {
+          "transport_name": "car",
+          "cost": [
+            [
+              36400,
+              11900
+            ],
+            [
+              47500,
+              11700
+            ]
+          ],
+          "gk": [
+            [
+              120,
+              120
+            ],
+            [
+              60,
+              60
+            ]
+          ],
+          "time": [
+            [
+              4.55,
+              1.49
+            ],
+            [
+              5.94,
+              1.46
+            ]
+          ],
+          "calc_trips": [
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "transport_name": "rail",
+          "cost": [
+            [
+              30000,
+              "nan"
+            ],
+            [
+              30000,
+              "nan"
+            ]
+          ],
+          "gk": [
+            [
+              1000,
+              "nan"
+            ],
+            [
+              1000,
+              "nan"
+            ]
+          ],
+          "time": [
+            [
+              24,
+              "nan"
+            ],
+            [
+              24,
+              "nan"
+            ]
+          ],
+          "calc_trips": [
+            [
+              1,
+              "nan"
+            ],
+            [
+              1,
+              "nan"
+            ]
+          ]
+        },
+        {
+          "transport_name": "air",
+          "cost": [
+            [
+              "nan",
+              250000
+            ],
+            [
+              "nan",
+              250000
+            ]
+          ],
+          "gk": [
+            [
+              "nan",
+              100
+            ],
+            [
+              "nan",
+              100
+            ]
+          ],
+          "time": [
+            [
+              "nan",
+              24
+            ],
+            [
+              "nan",
+              24
+            ]
+          ],
+          "calc_trips": [
+            [
+              "nan",
+              1
+            ],
+            [
+              "nan",
+              1
+            ]
+          ]
+        }
+      ],
+      "stocks": [
+        {
+          "stock_name": "Склад №2",
+          "value": 7500
+        },
+        {
+          "stock_name": "Склад №3",
+          "value": 7500
+        }
+      ],
+      "needs": [
+        {
+          "need_name": "МО №1",
+          "value": 10000
+        },
+        {
+          "need_name": "МО №2",
+          "value": 5000
+        }
+      ]
+    },
+    {
+      "product_name": "молоко",
+      "group": 2,
+      "time": 1400,
+      "unit": "trips",
+      "transport_list": [
+        {
+          "transport_name": "car",
+          "cost": [
+            [
+              36400,
+              11900
+            ],
+            [
+              47500,
+              11700
+            ]
+          ],
+          "gk": [
+            [
+              120,
+              120
+            ],
+            [
+              60,
+              60
+            ]
+          ],
+          "time": [
+            [
+              4.55,
+              1.49
+            ],
+            [
+              5.94,
+              1.46
+            ]
+          ],
+          "calc_trips": [
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "transport_name": "rail",
+          "cost": [
+            [
+              30000,
+              "nan"
+            ],
+            [
+              30000,
+              "nan"
+            ]
+          ],
+          "gk": [
+            [
+              1000,
+              "nan"
+            ],
+            [
+              1000,
+              "nan"
+            ]
+          ],
+          "time": [
+            [
+              24,
+              "nan"
+            ],
+            [
+              24,
+              "nan"
+            ]
+          ],
+          "calc_trips": [
+            [
+              1,
+              "nan"
+            ],
+            [
+              1,
+              "nan"
+            ]
+          ]
+        }
+      ],
+      "stocks": [
+        {
+          "stock_name": "Склад №2",
+          "value": 700
+        },
+        {
+          "stock_name": "Склад №5",
+          "value": 2300
+        }
+      ],
+      "needs": [
+        {
+          "need_name": "МО №1",
+          "value": 2000
+        },
+        {
+          "need_name": "МО №2",
+          "value": 1000
+        }
+      ]
+    },
+    {
+      "product_name": "сыр",
+      "group": 2,
+      "time": 1400,
+      "unit": "trips",
+      "transport_list": [
+        {
+          "transport_name": "car",
+          "cost": [
+            [
+              12000,
+              20000
+            ],
+            [
+              14000,
+              20000
+            ]
+          ],
+          "gk": [
+            [
+              130,
+              130
+            ],
+            [
+              70,
+              70
+            ]
+          ],
+          "time": [
+            [
+              4.55,
+              1.49
+            ],
+            [
+              5.94,
+              1.46
+            ]
+          ],
+          "calc_trips": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "transport_name": "rail",
+          "cost": [
+            [
+              30000,
+              "nan"
+            ],
+            [
+              30000,
+              "nan"
+            ]
+          ],
+          "gk": [
+            [
+              1000,
+              "nan"
+            ],
+            [
+              1000,
+              "nan"
+            ]
+          ],
+          "time": [
+            [
+              24,
+              "nan"
+            ],
+            [
+              24,
+              "nan"
+            ]
+          ],
+          "calc_trips": [
+            [
+              1,
+              "nan"
+            ],
+            [
+              1,
+              "nan"
+            ]
+          ]
+        }
+      ],
+      "stocks": [
+        {
+          "stock_name": "Склад №4",
+          "value": 2000
+        },
+        {
+          "stock_name": "Склад №5",
+          "value": 1000
+        }
+      ],
+      "needs": [
+        {
+          "need_name": "МО №1",
+          "value": 1500
+        },
+        {
+          "need_name": "МО №2",
+          "value": 1500
+        }
+      ]
+    }
+  ],
+  "plan_list": [
+    {
+      "model": "fractional",
+      "opt_func": "cost",
+      "priority": 1,
+      "products_names": [
+        "мука",
+        "картофель"
+      ]
+    },
+    {
+      "model": "whole",
+      "opt_func": "time",
+      "priority": 2,
+      "products_names": [
+        "сыр",
+        "молоко"
+      ]
+    }
+  ],
+  "max_cost": "nan"
+}
