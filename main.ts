@@ -128,19 +128,21 @@ function execute_file(fileName, params, path) {
 
 // var path_to_test_data ='E:\\Папка рабочего стола\\VScodeProjects\\vkr_js\\test_data3\\test_data_2x2.xlsx'
 // var path_to_test_data ='E:\\Папка рабочего стола\\VScodeProjects\\vkr_js\\test_data3\\1 product\\fractional_big_time\\test_data_2x2.xlsx'
-var path_to_test_data ='E:\\Папка рабочего стола\\VScodeProjects\\vkr_js\\test_data3\\1 product\\cost\\test_data_2x2_1_transport.xlsx'
+// var path_to_test_data ='E:\\Папка рабочего стола\\VScodeProjects\\vkr_js\\test_data3\\1 product\\cost\\test_data_3x3.xlsx'
+var PATH_TO_TEST_DATA ='E:\\Папка рабочего стола\\VScodeProjects\\vkr_js\\test_data\\1 product\\fractional_cost\\test_data_5x12.xlsx'
+let PATH_TO_INPUT_DATA = "E:\\Папка рабочего стола\\VScodeProjects\\vkr_js\\module_data\\module_input_data_2x2.json"
+let PATH_TO_SAVE_DATA = "E:\\Папка рабочего стола\\VScodeProjects\\vkr_js\\module_output_data\\module_output_data.json"
+let SOLVER_NAME = 'main.exe'
+let SOLVER_DIR = 'E:\\Папка рабочего стола\\pyCharmProjects\\connect_solver_by_pulp\\dist'
 
 
-get_data_from_excel(path_to_test_data).then(
+get_data_from_excel(PATH_TO_TEST_DATA).then(
     function(result){ 
         let fs = require('fs');
         // input_data_file_path - нужно указать ПОЛНЫЙ путь до файла с данными
         // let input_data_file_path = "E:\\Папка рабочего стола\\VScodeProjects\\vkr_js\\module_data\\module_input_data_5x12.json"
-        let input_data_file_path = "E:\\Папка рабочего стола\\VScodeProjects\\vkr_js\\module_data\\module_input_data_2x2.json"
-        fs.writeFile(input_data_file_path, JSON.stringify(result, null, 2),'utf8', (err) => err && console.error(err));
-        let solver_name = 'main.exe'
-        let solver_dir = 'E:\\Папка рабочего стола\\pyCharmProjects\\connect_solver_by_pulp\\dist'
-        execute_file(solver_name, [input_data_file_path], solver_dir).then(
+        fs.writeFile(PATH_TO_INPUT_DATA, JSON.stringify(result, null, 2),'utf8', (err) => err && console.error(err));
+        execute_file(SOLVER_NAME, [PATH_TO_INPUT_DATA, PATH_TO_SAVE_DATA], SOLVER_DIR).then(
             function(result){ console.log(result)},
             function(error) { console.log(new Error(error))}
         )
