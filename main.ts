@@ -129,7 +129,7 @@ function execute_file(fileName, params, path) {
 // var path_to_test_data ='E:\\Папка рабочего стола\\VScodeProjects\\vkr_js\\test_data3\\test_data_2x2.xlsx'
 // var path_to_test_data ='E:\\Папка рабочего стола\\VScodeProjects\\vkr_js\\test_data3\\1 product\\fractional_big_time\\test_data_2x2.xlsx'
 // var path_to_test_data ='E:\\Папка рабочего стола\\VScodeProjects\\vkr_js\\test_data3\\1 product\\cost\\test_data_3x3.xlsx'
-var PATH_TO_TEST_DATA ='E:\\Папка рабочего стола\\VScodeProjects\\vkr_js\\test_data\\1 product\\fractional_cost\\test_data_5x12.xlsx'
+var PATH_TO_TEST_DATA ='E:\\Папка рабочего стола\\VScodeProjects\\vkr_js\\test_data\\1 product\\fractional_cost\\test_data_20x40.xlsx'
 let PATH_TO_INPUT_DATA = "E:\\Папка рабочего стола\\VScodeProjects\\vkr_js\\module_data\\module_input_data_2x2.json"
 let PATH_TO_SAVE_DATA = "E:\\Папка рабочего стола\\VScodeProjects\\vkr_js\\module_output_data\\module_output_data.json"
 let SOLVER_NAME = 'main.exe'
